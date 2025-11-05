@@ -30,3 +30,5 @@ const sequelize = new Sequelize(
     }
   }
 );
+
+module.exports = { sequelize, testConnection };
