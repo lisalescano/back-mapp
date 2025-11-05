@@ -31,4 +31,15 @@ const sequelize = new Sequelize(
   }
 );
 
+const testConnection = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('✅ Conexión a Supabase exitosa');
+    return true;
+  } catch (error) {
+    console.error('❌ Error conectando a Supabase:', error.message);
+    return false;
+  }
+};
+
 module.exports = { sequelize, testConnection };
