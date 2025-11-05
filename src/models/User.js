@@ -47,6 +47,7 @@ module.exports = (sequelize) => {
       defaultValue: true
     }
   }, {
+    schema: 'public',
     tableName: 'users',
     timestamps: true,
     hooks: {

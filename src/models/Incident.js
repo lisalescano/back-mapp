@@ -68,6 +68,7 @@ module.exports = (sequelize) => {
       }
     }
   }, {
+    schema: 'public',
     tableName: 'incidents',
     timestamps: true,
     indexes: [
