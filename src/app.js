@@ -32,6 +32,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/incidents', incidentRoutes);
 app.use('/api/users', userRoutes);
 
+// Después de las otras rutas, agrega:
+app.use('/api', require('./routes/admin'));
+
 // Ruta no encontrada
 app.use((req, res) => {
   res.status(404).json({ error: 'Ruta no encontrada' });
