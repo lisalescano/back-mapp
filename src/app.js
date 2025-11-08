@@ -33,7 +33,7 @@ app.use('/api/incidents', incidentRoutes);
 app.use('/api/users', userRoutes);
 
 // Después de las otras rutas, agrega:
-app.use('/api', require('./routes/admin'));
+app.use('/api/admin', require('./routes/admin'));
 
 // Ruta no encontrada
 app.use((req, res) => {
