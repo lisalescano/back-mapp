@@ -7,7 +7,7 @@ router.post('/create-admin', async (req, res) => {
     console.log('🔧 Ejecutando script createAdmin...');
     
     // Ejecutar el script directamente
-    const createAdmin = require('../scripts/createAdmin');
+    const createAdmin = require('../../scripts/createAdmin');
     await createAdmin();
     
     res.json({ 
