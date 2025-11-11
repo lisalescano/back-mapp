@@ -2,6 +2,7 @@ require('dotenv').config();
 const app = require('./src/app');
 const { testConnection } = require('./src/config/database');
 const { syncDatabase } = require('./src/models');
+const { createAdmin } = require('./scripts/createAdmin');
 
 const PORT = process.env.PORT || 3000;
 
@@ -12,6 +13,8 @@ const startServer = async () => {
 
     // Sincronizar modelos
     await syncDatabase();
+
+    await createAdmin();
 
     // Iniciar servidor
     app.listen(PORT, () => {
